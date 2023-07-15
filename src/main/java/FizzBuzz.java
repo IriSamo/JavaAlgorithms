@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 /**
  * Java Program to solve FizzBuzz problem
  *

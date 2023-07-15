@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 /**
  * Java Program that implements Bubble Sort algorithm
  *
