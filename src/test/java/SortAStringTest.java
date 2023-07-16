@@ -7,13 +7,22 @@ public class SortAStringTest {
     @DataProvider
     public Object[][] dataSortAString() {
         return new Object[][] {
-                {new String("SortAString"), new String("ASSginorrtt")},
+                {"SortAString", "ASSginorrtt"},
+                {"CCccBBbbAAaa", "AABBCCaabbcc"},
+                {"CBAcba", "ABCabc"},
+                {"cCbBaA", "ABCabc"}
         };
     }
 
     @Test(dataProvider = "dataSortAString")
-    public static void testSortAString(String st, String expectedResult) {
+    public static void testSortStringWithArraysSort(String st, String expectedResult) {
 
-        Assert.assertEquals(SortAString.sortString(st), expectedResult);
+        Assert.assertEquals(SortAString.sortStringWithArraysSort(st), expectedResult);
+    }
+
+    @Test(dataProvider = "dataSortAString")
+    public static void testSortStringWithBubbleSort(String st, String expectedResult) {
+
+        Assert.assertEquals(SortAString.sortStringWithBubbleSort(st), expectedResult);
     }
 }

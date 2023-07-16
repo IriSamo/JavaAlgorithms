@@ -14,13 +14,13 @@ public class SortAString {
      * @param string
      * @return String
      */
-    public static String sortString1(String string) {
+    public static String sortStringWithArraysSort(String string) {
 
-        char[] tempArray = string.toCharArray();// Converting input string to character array
+        char[] array = string.toCharArray();// Convert the input string into a char array
 
-        Arrays.sort(tempArray); // Sorting temp array using
+        Arrays.sort(array); // Sort the char array
 
-        return new String(tempArray);// Returning new sorted string
+        return new String(array);// Convert the sorted array back to a String
     }
 
     /**
@@ -29,10 +29,10 @@ public class SortAString {
      * @param string
      * @return String
      */
-    public static String sortString(String string) {
+    public static String sortStringWithBubbleSort(String string) {
         char temp;
 
-        char[] array = string.toCharArray();
+        char[] array = string.toCharArray(); //Convert the input string into a char array
 
         for (int i = 0; i < array.length - 1; i++) {
             for (int j = 1; j < array.length - i; j++) {
@@ -43,11 +43,6 @@ public class SortAString {
                 }
             }
         }
-        return new String(array);
-    }
-
-    public static void main(String[] args) {
-        System.out.println(sortString1("SortAString"));
-        System.out.println(sortString("SortAString"));
+        return new String(array); // Convert the sorted array back to a String
     }
 }
